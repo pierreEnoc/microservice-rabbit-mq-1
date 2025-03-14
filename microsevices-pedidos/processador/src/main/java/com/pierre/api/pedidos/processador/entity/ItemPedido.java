@@ -1,9 +1,6 @@
 package com.pierre.api.pedidos.processador.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,11 +18,9 @@ public class ItemPedido {
     @Id
     private UUID id = UUID.randomUUID();
 
-    @ManyToMany
+    @ManyToOne
     private  Produto produto;
-
     private Integer quantidade;
-
-    @ManyToMany
+    @ManyToOne
     private Pedido pedido;
 }
