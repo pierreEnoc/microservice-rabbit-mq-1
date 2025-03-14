@@ -1,4 +1,4 @@
-package com.pierre_api.services_1.entity;
+package br.com.pierre.pedido.notificacao.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;

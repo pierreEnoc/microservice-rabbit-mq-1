@@ -1,4 +1,4 @@
-package com.pierre_api.services_1.enuums;
+package br.com.pierre.pedido.notificacao.entity.enums;
 
 public enum Status {
 
