@@ -15,14 +15,15 @@ public class EmailService {
         this.mailSender = mailSender;
     }
 
-    SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
 
     public void emviarEmail(Pedido pedido) {
+        SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
 
         simpleMailMessage.setFrom("Pedidos-Api@compagny");
         simpleMailMessage.setTo(pedido.getEmailNotificacao());
         simpleMailMessage.setSubject("Pedido de compras");
         simpleMailMessage.setText(this.gerarMessagem(pedido));
+        mailSender.send(simpleMailMessage);
 
     }
 
